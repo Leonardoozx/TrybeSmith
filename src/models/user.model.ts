@@ -16,7 +16,7 @@ export default class UserModel {
     );
   };
 
-  public findUserByUserName = async (username: string): Promise<User> => {
+  public findUserByUsername = async (username: string): Promise<User> => {
     const [rows] = await this.connection.execute(
       'SELECT * FROM Trybesmith.Users WHERE username = ?',
       [username],
