@@ -9,5 +9,7 @@ export default class UserService {
     this.model = new UserModel(connection);
   }
 
-  insertUser = (user: User) => this.model.insertUser(user); 
+  public insertUser = (user: User) => this.model.insertUser(user); 
+
+  public findUserByUsername = (username: string) => this.model.findUserByUsername(username);
 }
