@@ -21,4 +21,11 @@ export default class ProductModel {
     const [products] = await this.connection.execute('SELECT * FROM Trybesmith.Products');
     return products as Product[];
   };
+
+  public updateProduct = async (id: number, productId: number) => {
+    await this.connection.execute(
+      'UPDATE Trybesmith.Products SET orderId = ? WHERE id = ?',
+      [id, productId],
+    );
+  }; 
 }
