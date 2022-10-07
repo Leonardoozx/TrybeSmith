@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import * as jwt from 'jsonwebtoken';
 import statusCodes from '../statusCodes';
 import OrderService from '../services/order.service';
 import ProductService from '../services/product.service';
