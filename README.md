@@ -2,10 +2,8 @@
 
 # Orientações
 
-<strong>🐳 Rodando no Docker vs Localmente</strong><br />
+<strong>🐳 Rodando no Docker</strong><br />
   
-  ## Com Docker
-
   > Rode os serviços `node` e `db` com o comando `docker-compose up -d`.
   - Lembre-se de parar o `mysql` se estiver usando localmente na porta padrão (`3306`), ou adapte, caso queira fazer uso da aplicação em containers
   - Esses serviços irão inicializar um container chamado `trybesmith` e outro chamado `trybesmith_db`.
@@ -17,8 +15,6 @@
   > Instale as dependências [**Caso existam**] com `npm install`
 
   ⚠ Atenção ⚠ Caso opte por utilizar o Docker, **TODOS** os comandos disponíveis no `package.json` (npm start, npm test, npm run dev, ...) devem ser executados **DENTRO** do container, ou seja, no terminal que aparece após a execução do comando `docker exec` citado acima. 
-
-  ⚠ Atenção ⚠ O **git** dentro do container não vem configurado com suas credenciais. Ou faça os commits fora do container, ou configure as suas credenciais do git dentro do container.
-
-  ⚠ Atenção ⚠ Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.
+  
+  ⚠ Atenção ⚠ Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização pode gerar conflitos no projeto.
 
